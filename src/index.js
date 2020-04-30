@@ -36,16 +36,7 @@ function countProductsByCategory(products) {
 function getPromotion(counter) {
   const qtdCategory = Object.values(counter).length;
 
-  switch (qtdCategory) {
-    case 1:
-      return promotions[0];
-    case 2:
-      return promotions[1];
-    case 3:
-      return promotions[2];
-    default:
-      return promotions[3];
-  }
+  return qtdCategory > 3 ? promotions[3] : promotions[qtdCategory - 1];
 }
 
 function sumRegularPrice(products) {
