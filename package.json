@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-12",
+  "version": "1.0.0",
+  "description": "Challege 4 AceleraDev React Online - Codenation",
+  "main": "src/index.js",
+  "Author": "Abimael Andrade <abimaelc.andrade@gmail.com>",
+  "scripts": {
+    "test": "jest test/index.test.js",
+    "test:watch": "jest test/index.test.js --watch"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "jest-junit": "^10.0.0"
+  }
+}
