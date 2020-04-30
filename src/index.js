@@ -1,22 +1,17 @@
 const promotions = ['SINGLE LOOK', 'DOUBLE LOOK', 'TRIPLE LOOK', 'FULL LOOK'];
 
 function getProducts(ids, productsList) {
-  const products = productsList.reduce((acumulator, product) => {
-    if (ids.includes(product.id)) {
-      acumulator.push(product);
-    }
-
-    return acumulator;
-  }, []);
+  const products = productsList.filter((product) => ids.includes(product.id));
 
   return products;
 }
 
 function productsItems(products) {
-  const items = products.reduce((acumulator, product) => {
+  const items = products.map((product) => {
     const { name, category } = product;
-    return [...acumulator, { name, category }];
-  }, []);
+
+    return { name, category };
+  });
 
   return items;
 }
